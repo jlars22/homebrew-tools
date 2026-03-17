@@ -25,10 +25,6 @@ class AwsVpnCli < Formula
     zsh_completion.install "_vpn"
   end
 
-  def post_install
-    system bin/"vpn", "import"
-  end
-
   def caveats
     <<~EOS
       Get started:
