@@ -2,7 +2,7 @@ class AwsVpnCli < Formula
   desc "CLI for AWS Client VPN with SAML authentication"
   homepage "https://github.com/jlars22/aws-vpn-cli"
   url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "da8eb29209de32b36da47986061e256b468f9630de3180ca9362250e2b6074dc"
+  sha256 "1a06fe25a217b7c3902ef49f583da50b3027aae567ff317e67155d2d0af29c76"
   license "MIT"
 
   depends_on "fzf"
@@ -27,9 +27,9 @@ class AwsVpnCli < Formula
 
   def caveats
     <<~EOS
-      Import your profiles from the AWS VPN Client:
+      Get started:
 
-        vpn import
+        vpn
     EOS
   end
 
