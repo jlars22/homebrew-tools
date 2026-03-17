@@ -1,8 +1,8 @@
 class AwsVpnCli < Formula
   desc "CLI for AWS Client VPN with SAML authentication"
   homepage "https://github.com/jlars22/aws-vpn-cli"
-  url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "1a06fe25a217b7c3902ef49f583da50b3027aae567ff317e67155d2d0af29c76"
+  url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "bfdcc3ee05a4d447699a5596abd1df948cdb6b1781b48c6aed99f3c33fd21689"
   license "MIT"
 
   depends_on "fzf"
@@ -23,6 +23,10 @@ class AwsVpnCli < Formula
 
     bin.install_symlink libexec/"vpn"
     zsh_completion.install "_vpn"
+  end
+
+  def post_install
+    system bin/"vpn", "import"
   end
 
   def caveats
