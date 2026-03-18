@@ -6,14 +6,11 @@ class AwsVpnCli < Formula
   license "MIT"
 
   depends_on "fzf"
-  depends_on "go" => :build
-  depends_on :macos
+  depends_on "python@3"
 
   def install
-    system "go", "build", "-o", "saml-server", "server.go"
-
     libexec.install "vpn"
-    libexec.install "saml-server"
+    libexec.install "saml-server.py"
     libexec.install "route-up.sh"
     libexec.install "dns-down.sh"
 
