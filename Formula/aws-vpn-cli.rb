@@ -1,8 +1,8 @@
 class AwsVpnCli < Formula
   desc "CLI for AWS Client VPN with SAML authentication"
   homepage "https://github.com/jlars22/aws-vpn-cli"
-  url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "c042f614b216688100b4033903cdc80c3a91069d3ecda97e3d6c851c1eec5bab"
+  url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "e22e910f26a77eab38bac1f73c9ee2dbcb7db9da9559f8ee8520f8a0c97e83d7"
   license "MIT"
 
   depends_on "fzf"
@@ -19,6 +19,7 @@ class AwsVpnCli < Formula
     chmod 0755, libexec/"dns-down.sh"
 
     bin.install_symlink libexec/"vpn"
+    bash_completion.install "vpn.bash" => "vpn"
     zsh_completion.install "_vpn"
   end
 
