@@ -1,8 +1,8 @@
 class AwsVpnCli < Formula
   desc "CLI for AWS Client VPN with SAML authentication"
   homepage "https://github.com/jlars22/aws-vpn-cli"
-  url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "ee0e3cc10e866eab3998555301af6f525074c5e9fe1ec8161e3d4ece46f1cad5"
+  url "https://github.com/jlars22/aws-vpn-cli/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "4fadee91e1a7b358c52495ca66ff6becc872f95870e77c50d621945734c22226"
   license "MIT"
 
   depends_on "fzf"
